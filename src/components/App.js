@@ -1,5 +1,7 @@
 import { Component } from 'react';
 
+import Section from './Section';
+
 class App extends Component {
   state = {
     good: 0,
@@ -8,7 +10,11 @@ class App extends Component {
   };
 
   render() {
-    return <div></div>;
+    return (
+      <div>
+        <Section title="Please leave feedback"></Section>
+      </div>
+    );
   }
 }
 
