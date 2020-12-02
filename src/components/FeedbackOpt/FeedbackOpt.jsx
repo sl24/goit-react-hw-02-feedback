@@ -1,21 +1,20 @@
 import PropTypes from 'prop-types';
 
-const FeedbackBtn = ({ feedback, onLeaveFeedback }) => {
-  return (
-    <button type="button" data-feedback={feedback} onClick={onLeaveFeedback}>
-      {feedback}
-    </button>
-  );
-};
-
 const FeedbackOpt = ({ options, onLeaveFeedback }) => {
-  return options.map(option =>
-    FeedbackBtn({ feedback: option, onLeaveFeedback }),
-  );
+  return options.map((option, id) => (
+    <button
+      class="button"
+      key={id}
+      data-feedback={option}
+      onClick={onLeaveFeedback}
+    >
+      {option}
+    </button>
+  ));
 };
 
-FeedbackBtn.propTypes = {
-  options: PropTypes.arrayOf(PropTypes.string),
+FeedbackOpt.propTypes = {
+  options: PropTypes.array.isRequired,
   onLeaveFeedback: PropTypes.func.isRequired,
 };
 
