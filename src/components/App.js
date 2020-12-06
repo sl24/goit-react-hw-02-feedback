@@ -45,7 +45,7 @@ class App extends Component {
           bad={bad}
           total={total}
           positivePercentage={positivePercentage}
-        ></Statistics>
+        />
       </Section>
     );
   }
